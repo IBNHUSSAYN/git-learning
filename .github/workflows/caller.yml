@@ -1,0 +1,8 @@
+name: WORKFLOW CALLER
+on:
+  push
+jobs:
+  manage:
+    name: Call_workflow
+    uses: IBNHUSSAYN/cicd-demo/.github/workflows/demo.yml@main
+    
