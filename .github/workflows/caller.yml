@@ -8,4 +8,11 @@ jobs:
     secrets:
       USERNAME: ${{ secrets.USERNAME }}
       PASSWORD: ${{ secrets.PASSWORD }}
-    
+  demo:
+    name: runner
+    runs-on: ubuntu-latest
+    steps:
+      - name: step one
+        run: |
+          echo "PASSWORD: ${{ secrets.PASSWORD }}"
+        
