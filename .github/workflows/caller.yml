@@ -5,4 +5,7 @@ jobs:
   manage:
     name: Call_workflow
     uses: IBNHUSSAYN/cicd-demo/.github/workflows/demo.yml@main
+    secrets:
+      USERNAME: ${{ secrets.USERNAME }}
+      PASSWORD: ${{ secrets.PASSWORD }}
     
