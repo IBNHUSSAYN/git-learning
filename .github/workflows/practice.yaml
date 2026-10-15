@@ -1,0 +1,12 @@
+name: GITHUB ACTION
+on:
+  push
+jobs:
+  docker:
+    name: Base_image
+    runs-on: ubuntu-22.04
+    steps:
+      - name: step_one
+        run: |
+          echo "Good Morning"
+          echo "Hi! DevOps Engineer"
