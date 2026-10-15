@@ -14,5 +14,7 @@ jobs:
           echo "Good Morning"
           echo "Hi! DevOps Engineer"
           echo "Hi! ${{ env.NAME}} "
+          echo "Username: ${{ vars.USERNAME }}"
+          echo "Password: ${{ secrets.PASSWORD }}"
         env:
           NAME: "Hussaini Yusuf"
