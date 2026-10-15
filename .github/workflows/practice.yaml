@@ -8,6 +8,7 @@ jobs:
   docker:
     name: Base_image
     runs-on: ubuntu-22.04
+    environment: variables
     steps:
       - name: step_one
         run: |
@@ -18,3 +19,4 @@ jobs:
           echo "Password: ${{ secrets.PASSWORD }}"
         env:
           NAME: "Hussaini Yusuf"
+          USERNAME: 
