@@ -1,6 +1,9 @@
 name: GITHUB ACTION
 on:
-  push
+  pull_request:
+    branches:
+      - main
+      - dev
 jobs:
   docker:
     name: Base_image
@@ -10,3 +13,6 @@ jobs:
         run: |
           echo "Good Morning"
           echo "Hi! DevOps Engineer"
+          echo "Hi! ${{ env.NAME}} "
+        env:
+          NAME: "Hussaini Yusuf"
