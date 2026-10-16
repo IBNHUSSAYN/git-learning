@@ -10,8 +10,7 @@ jobs:
     name: Base_image
     runs-on: ubuntu-22.04
     environment: 
-      variable
-      #JOB_ENVIRONMENTS
+      JOB_ENVIRONMENTS 
     steps:
       - name: step_one
         run: |
