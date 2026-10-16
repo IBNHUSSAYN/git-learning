@@ -25,4 +25,8 @@ jobs:
           echo "The app ${{ vars.APP_NAME }} has the API-KEYS of ${{ secrets.API_KEYS }}"
         env:
           NAME: "Hussaini Yusuf"
+        environments:
+          JOBS_ENVIRONMENT
+          variable
+      
          
