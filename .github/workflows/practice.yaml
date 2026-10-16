@@ -8,12 +8,13 @@ on:
 jobs:
   docker:
     name: Base_image
-    runs-on: ubuntu-22.04
-    environment: 
-      JOBS-ENVIRONMENT
-      
+    runs-on: ubuntu-22.04      
     steps:
       - name: step_one
+        env:
+          NAME: "Hussaini Yusuf"
+          USERNAME: ${{ vars.USERNAME }}
+          DB_PASSWORD: ${{ secrets.PASSWORD }}
         run: |
           echo "Good Morning"
           echo "Hi! DevOps Engineer"
@@ -21,8 +22,8 @@ jobs:
           echo "Username: ${{ vars.USERNAME }}"
           echo "Password: ${{ secrets.PASSWORD }}"
           echo "The app ${{ vars.APP_NAME }} has the API-KEYS of ${{ secrets.API_KEYS }}"
-        env:
-          NAME: "Hussaini Yusuf"
+          echo -e "USERNAME: $USERNAME \nPASSWORD: $DB_PASSWORD"
+          
        
       
          
