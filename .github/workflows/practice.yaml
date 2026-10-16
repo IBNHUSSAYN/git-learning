@@ -4,16 +4,14 @@ on:
     branches:
       - main
       - dev
-env: 
-      variable
-      JOBS_ENVIRONMENT
+
 jobs:
   docker:
     name: Base_image
     runs-on: ubuntu-22.04
-    #environment: 
-      #variable
-      #JOB_ENVIRONMENTS
+    environment: 
+      variable
+      JOB_ENVIRONMENTS
     steps:
       - name: step_one
         run: |
@@ -25,8 +23,6 @@ jobs:
           echo "The app ${{ vars.APP_NAME }} has the API-KEYS of ${{ secrets.API_KEYS }}"
         env:
           NAME: "Hussaini Yusuf"
-        environments:
-          JOBS_ENVIRONMENT
-          variable
+       
       
          
