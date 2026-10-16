@@ -13,16 +13,17 @@ jobs:
       - name: step_one
         env:
           NAME: "Hussaini Yusuf"
-          USERNAME: ${{ vars.USERNAME }}
-          DB_PASSWORD: ${{ secrets.PASSWORD }}
+          APP_NAME: ${{ vars.APP_NAME }}
+          VERSION: ${{ vars.VERSION }}
+          API_KEYS: ${{ secrets.API_KEYS }}
         run: |
           echo "Good Morning"
           echo "Hi! DevOps Engineer"
           echo "Hi! ${{ env.NAME}} "
           echo "Username: ${{ vars.USERNAME }}"
           echo "Password: ${{ secrets.PASSWORD }}"
-          echo "The app ${{ vars.APP_NAME }} has the API-KEYS of ${{ secrets.API_KEYS }}"
-          echo -e "USERNAME: $USERNAME \nPASSWORD: $DB_PASSWORD"
+          echo "The app ${{ vars.APP_NAME }}, with Version $VERSION has the API-KEYS of ${{ secrets.API_KEYS }}"
+          echo -e "APP-NAME: $APP_NAME \nPASSWORD: $API_KEYS"
           
        
       
