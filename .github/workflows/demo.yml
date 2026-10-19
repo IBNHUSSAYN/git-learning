@@ -1,0 +1,26 @@
+name: SELF HOSTED RUNNER
+on:
+  push
+jobs:
+    job_1:
+      name: System Information
+      runs-on: ubuntu-latest
+      steps:
+        - name: demo_1
+          run: |
+            echo "HOSTNAME: $(hostname)"
+            echo "OS Version"
+            lsb_release -a || cat /etc/os-release
+            echo "Runner Name: ${{ runner.name }}"
+            echo "Runner OS: ${{ runner.os }}"
+    job2:
+      name: System Information
+      runs-on: self-hosted
+      steps:
+        - name: demo_2
+          run: |
+            echo "HOSTNAME: $(hostname)"
+            echo "OS Version"
+            lsb_release -a || cat /etc/os-release
+            echo "Runner Name: ${{ runner.name }}"
+            echo "Runner OS: ${{ runner.os }}"
