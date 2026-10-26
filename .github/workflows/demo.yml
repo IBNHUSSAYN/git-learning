@@ -15,7 +15,7 @@ jobs:
             echo "Runner OS: ${{ runner.os }}"
     job2:
       name: System Information
-      runs-on: self-hosted
+      runs-on: demo10
       steps:
         - name: demo_2
           run: |
