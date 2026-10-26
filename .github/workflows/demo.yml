@@ -1,6 +1,6 @@
 name: SELF HOSTED RUNNER
 on:
-  workflow_dispatch: 
+  workflow_dispatch
 jobs:
     job_1:
       name: System Information
